@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: API Title
+  description: API Description
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@example.com
+    url: https://example.com/support
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  termsOfService: https://example.com/terms
+  x-metadata:
+    team: Redocly
+servers:
+  - url: http://localhost:3000
+    description: Development server
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      responses:
+        '200':
+          description: Server is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "OK"
